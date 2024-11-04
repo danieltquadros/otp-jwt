@@ -83,7 +83,7 @@ O projeto está organizado da seguinte forma:
 
 ## Variáveis de Ambiente
 
-- Copie o código abaixo, cole no arquivo .env e configure con seus dados
+- Copie o código abaixo, cole no arquivo .env e configure com seus dados
 
 ```bash
 DATABASE_URL=postgresql://username:password@localhost:5432/otp_jwt
@@ -95,9 +95,10 @@ MAILTRAP_PASS=sua_senha_mailtrap
 ## Uso da API
 
 **Rota de Login**
-Endpoint: POST /auth/sign-in
-Descrição: Recebe o e-mail do usuário e envia o código OTP por e-mail.
-Exemplo de Request:
+
+- Endpoint: POST /auth/sign-in
+- Descrição: Recebe o e-mail do usuário e envia o código OTP por e-mail.
+- Exemplo de Request:
 
 ```bash
 {
@@ -107,9 +108,10 @@ Exemplo de Request:
 ```
 
 **Rota de Validação de OTP**
-Endpoint: POST /auth/use-otp
-Descrição: Valida o código OTP e retorna um token JWT.
-Exemplo de Request:
+
+- Endpoint: POST /auth/use-otp
+- Descrição: Valida o código OTP e retorna um token JWT.
+- Exemplo de Request:
 
 ```bash
 {
@@ -120,9 +122,10 @@ Exemplo de Request:
 ```
 
 **Rota de Cadastro**
-Endpoint: POST /auth/signup
-Descrição: Registra um novo usuário.
-Exemplo de Request:
+
+- Endpoint: POST /auth/signup
+- Descrição: Registra um novo usuário.
+- Exemplo de Request:
 
 ```bash
 {
