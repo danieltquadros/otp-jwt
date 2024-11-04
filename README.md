@@ -52,7 +52,11 @@ O projeto está organizado da seguinte forma:
    ```
 
 2. **Instale as dependências**:
+
+   ```bash
    npm install
+
+   ```
 
 3. **Configuração do Banco de Dados**:
 
@@ -64,19 +68,29 @@ O projeto está organizado da seguinte forma:
 - Crie/Use uma conta no/do Mailtrap e configure o arquivo .env com as credenciais de envio de e-mails.
 
 5. **Execute as migrações do Prisma**:
+
+   ```bash
    npx prisma migrate dev
 
+   ```
+
 6. **Inicie o servidor em ambiente de desenvolvimento**:
-   npm run dev
+
+```bash
+ npm run dev
+
+```
 
 ## Variáveis de Ambiente
 
 - Copie o código abaixo, cole no arquivo .env e configure con seus dados
 
+```bash
 DATABASE_URL=postgresql://username:password@localhost:5432/otp_jwt
 JWT_SECRET=sua_chave_secreta
 MAILTRAP_USER=seu_usuario_mailtrap
 MAILTRAP_PASS=sua_senha_mailtrap
+```
 
 ## Uso da API
 
@@ -84,27 +98,39 @@ MAILTRAP_PASS=sua_senha_mailtrap
 Endpoint: POST /auth/sign-in
 Descrição: Recebe o e-mail do usuário e envia o código OTP por e-mail.
 Exemplo de Request:
+
+```bash
 {
 "email": "usuario@exemplo.com"
 }
+
+```
 
 **Rota de Validação de OTP**
 Endpoint: POST /auth/use-otp
 Descrição: Valida o código OTP e retorna um token JWT.
 Exemplo de Request:
+
+```bash
 {
 "id": "userid",
 "code": "123456"
 }
 
+```
+
 **Rota de Cadastro**
 Endpoint: POST /auth/signup
 Descrição: Registra um novo usuário.
 Exemplo de Request:
+
+```bash
 {
 "name": "Nome do Usuário",
 "email": "usuario@exemplo.com"
 }
+
+```
 
 ## Considerações de Segurança
 
